@@ -1,7 +1,6 @@
 #ifndef QACCELERATOR_H
 #define QACCELERATOR_H
 
-// TODO(ogaro): Do not release repo as is to the public.
 // TODO(ogaro): Pass in parent for all qobjects
 
 #include "qaccelerator-db.h"
