@@ -1,0 +1,12 @@
+#!/bin/bash
+
+readonly IMAGES_DIR="images"
+readonly QRC_FILE="images.qrc"
+
+# Create a qrc file for files under ./images
+qrc_contents="<RCC>\n\t<qresource>\n"
+for f in "$IMAGES_DIR"/*; do
+  qrc_contents=$qrc_contents"\t\t<file>$f</file>\n"
+done
+qrc_contents=$qrc_contents"\t</qresource>\n</RCC>"
+echo -e "$qrc_contents" > $QRC_FILE

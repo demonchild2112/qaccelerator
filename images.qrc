@@ -1,0 +1,23 @@
+<RCC>
+	<qresource>
+		<file>images/bin.png</file>
+		<file>images/dark_default_file_icon.png</file>
+		<file>images/default_file_icon.png</file>
+		<file>images/download.png</file>
+		<file>images/folder.png</file>
+		<file>images/gear.png</file>
+		<file>images/grey_default_file_icon.png</file>
+		<file>images/import.png</file>
+		<file>images/multiply.png</file>
+		<file>images/pause.png</file>
+		<file>images/play.png</file>
+		<file>images/plus.png</file>
+		<file>images/qx_blur.png</file>
+		<file>images/qx_flash2.png</file>
+		<file>images/qx_flash.png</file>
+		<file>images/qx.png</file>
+		<file>images/refresh.png</file>
+		<file>images/right_arrow.png</file>
+		<file>images/thin_refresh.png</file>
+	</qresource>
+</RCC>
