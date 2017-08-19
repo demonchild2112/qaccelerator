@@ -289,7 +289,6 @@ void DownloadMonitorPage::DrawShardGrid() {
   }
 }
 
-// TODO(ogaro): Separate method for resuming.
 bool DownloadMonitorPage::StartDownload() {
   qDebug() << "Starting download.";
   DrawShardGrid();
@@ -332,10 +331,6 @@ bool DownloadMonitorPage::StartDownload() {
 }
 
 std::pair<int, double> DownloadMonitorPage::GetProgress() {
-  // TODO: DELETE!!
-  if (progress_ > 0.3) {
-    // exit(-1);
-  }
   return make_pair(db_item_.Id(), progress_);
 }
 
@@ -545,7 +540,7 @@ void DownloadMonitorPage::UpdateProgress() {
   if (file_size > 0) {
     progress_ = overall_downloaded / (double) file_size;
     SetTabProgress();
-  } else {
+  } else if (!is_done_) {
     return;
   }
 
@@ -560,8 +555,13 @@ void DownloadMonitorPage::UpdateProgress() {
                << shard_rows_.size() << " shard rows.";
     }
     shard_rows_[i].Label()->setText(IntFileSizeToString(shard_downloaded));
-    shard_rows_[i].ProgressBar()->setValue((int)
-        (shard_downloaded * 100 / shard_allocation));
+    int percent_completed = 0;
+    if (file_size > 0) {
+      percent_completed = (int) (shard_downloaded * 100 / shard_allocation);
+    } else if (is_done_) {
+      percent_completed = 100;
+    }
+    shard_rows_[i].ProgressBar()->setValue(percent_completed);
   }
 }
 

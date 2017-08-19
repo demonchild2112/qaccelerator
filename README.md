@@ -1,4 +1,4 @@
 QAccelerator
 ============
 
-A free, powerful download manager/accelerator: http://ogaro.io/qaccelerator
+A free, powerful download manager/accelerator: https://ogaro.io/qaccelerator

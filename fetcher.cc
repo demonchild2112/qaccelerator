@@ -378,6 +378,7 @@ void Fetcher::Resume(int num_connections) {
 }
 
 void Fetcher::PrepareThreads() {
+  qDebug() << "File size is " << file_size_;
   std::vector<Segment> pre_downloaded_segments;
   GetDownloadedSegments(work_dir_, &pre_downloaded_segments);
   std::vector<std::vector<Segment> > allocations;
@@ -465,12 +466,13 @@ bool Fetcher::GetProgress(qint64* overall_downloaded,
   *overall_downloaded = 0;
   for (WorkerUnit* unit : worker_units_) {
     qint64 downloaded = unit->TotalDownloaded();
+    // Note: This will be 1 if file size is unknown.
     qint64 allocated = unit->Allocation();
     if (downloaded < 0) {
       DIE() << "Running worker " << unit->GetWorker()->GetId()
             << " had negative downloaded value "
             << downloaded;
-    } else if (downloaded > allocated) {
+    } else if (file_size_ > 0 && downloaded > allocated) {
       qDebug() << downloaded << " (downloaded) is greater than "
                << allocated << " (allocated).";
       return false;
