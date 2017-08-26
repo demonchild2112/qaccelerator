@@ -6,5 +6,6 @@ image:
 install:
 - ps: build_qx.ps1
 
-build_script:
-- ps: Write-Output 'Buid completed.'
+#build_script:
+#- ps: Write-Output 'Buid completed.'
+build: off
