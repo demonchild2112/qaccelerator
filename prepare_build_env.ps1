@@ -1,0 +1,5 @@
+﻿$env:Path += ';C:\Program Files (x86)\Windows Kits\10\bin\x64'
+$env:INCLUDE += ';C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE'
+$env:LIB += ';C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\LIB\amd64'
+$env:LIBPATH += ';C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\LIB\amd64'
+$env:LIBPATH += ';C:\WINDOWS\Microsoft.NET\Framework64'
