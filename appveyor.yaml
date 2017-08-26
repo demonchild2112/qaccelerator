@@ -1,0 +1,6 @@
+platform: x64
+image:
+- Visual Studio 2017
+clone_folder: C:\qx
+install:
+- ps: build_qx.ps1
