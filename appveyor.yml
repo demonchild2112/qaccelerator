@@ -1,12 +1,10 @@
 platform: x64
 
-#image:
-#- Visual Studio 2017
+image:
+- Visual Studio 2017
 
 install:
-- ps: Write-Output 'Install completed.'
+- ps: build_qx.ps1
 
-#build_script:
-#- ps: Write-Output 'Buid completed.'
 build_script:
 - ps: Write-Output 'Build completed.'
