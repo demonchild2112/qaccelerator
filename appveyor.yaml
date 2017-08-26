@@ -5,3 +5,6 @@ image:
 
 install:
 - ps: build_qx.ps1
+
+build:
+- ps: Write-Output 'Buid completed.'

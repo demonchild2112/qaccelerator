@@ -3,4 +3,5 @@ $binarycreator = 'C:\Qt\Tools\QtInstallerFramework\2.0\bin\binarycreator.exe'
 $qmake = 'C:\Qt\5.9.1\msvc2017_64\bin\qmake.exe'
 cd C:\projects\qaccelerator
 pwd
-
+$qmake
+git status
