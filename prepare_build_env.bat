@@ -1,3 +1,5 @@
+@REM Based on Visual C++ 2015 Build Tools script: http://landinghub.visualstudio.com/visual-cpp-build-tools
+
 @echo off
 
 set curDir=%~dp0
@@ -316,9 +318,9 @@ if exist "%VCINSTALLDIR%ATLMFC\LIB\amd64" set LIBPATH=%VCINSTALLDIR%ATLMFC\LIB\a
 if exist "%VCINSTALLDIR%LIB\amd64" set LIBPATH=%VCINSTALLDIR%LIB\amd64;%LIBPATH%
 
 set Platform=X64
-echo %PATH% > path.txt
-echo %INCLUDE% > include.txt
-echo %LIB% > lib.txt
-echo %LIBPATH% > libpath.txt
+echo %PATH% > env.path.txt
+echo %INCLUDE% > env.include.txt
+echo %LIB% > env.lib.txt
+echo %LIBPATH% > env.libpath.txt
 
 @exit /B 0
