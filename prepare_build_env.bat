@@ -316,3 +316,9 @@ if exist "%VCINSTALLDIR%ATLMFC\LIB\amd64" set LIBPATH=%VCINSTALLDIR%ATLMFC\LIB\a
 if exist "%VCINSTALLDIR%LIB\amd64" set LIBPATH=%VCINSTALLDIR%LIB\amd64;%LIBPATH%
 
 set Platform=X64
+echo %PATH% > path.txt
+echo %INCLUDE% > include.txt
+echo %LIB% > lib.txt
+echo %LIBPATH% > libpath.txt
+
+@exit /B 0
