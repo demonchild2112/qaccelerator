@@ -4,7 +4,7 @@ cd C:\projects\qaccelerator
 
 # Prepare the build environment, and dump the vars to files so
 # we can load them here.
-& prepare_build_env.bat
+& C:\projects\qaccelerator\prepare_build_env.bat
 $env:PATH = cat env.path.txt
 $env:LIB = cat env.lib.txt
 $env:LIBPATH = cat env.libpath.txt
