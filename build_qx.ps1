@@ -10,7 +10,8 @@ $env:LIB = cat env.lib.txt
 $env:LIBPATH = cat env.libpath.txt
 $env:INCLUDE = cat env.include.txt
 
-$env:Path += ';C:\Qt\5.9.1\msvc2015_64'
+$env:PATH += ';C:\Qt\5.9.1\msvc2015_64\bin'
+# $env:PATH += ';C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64'
 
 qmake
 nmake
