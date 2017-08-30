@@ -1,9 +1,9 @@
 ﻿$sevenzip = 'C:\Program Files\7-Zip\7z.exe'
 $binarycreator = 'C:\Qt\Tools\QtInstallerFramework\2.0\bin\binarycreator.exe'
-cd C:\projects\qaccelerator
+#cd C:\projects\qaccelerator
 
 # Prepare the build environment.
-& C:\projects\qaccelerator\prepare_build_env.bat
+& .\prepare_build_env.bat
 $env:PATH = cat env.path.txt
 $env:LIB = cat env.lib.txt
 $env:LIBPATH = cat env.libpath.txt
