@@ -7,5 +7,5 @@ install:
 - ps: Write-Output 'Install completed.'
 
 build_script:
-- powershell C:\projects\qaccelerator\build_qx.ps1 basic
-- powershell C:\projects\qaccelerator\build_qx.ps1 installer
+- powershell .\build_qx.ps1 basic
+- powershell .\build_qx.ps1 installer
