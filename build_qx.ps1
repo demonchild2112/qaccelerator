@@ -22,8 +22,18 @@ if ($args[0] -eq 'basic') {
   $env:INCLUDE = cat env.include.txt
   $env:PATH += ";$compiler_dir"
 
-  qmake
+  qmake ../
+
+  if (!$?) {
+    exit 5
+  }
+
   nmake
+
+  if (!$?) {
+    exit 6
+  }
+
   cd $BASE_DIR
   exit 0
 }
@@ -41,7 +51,7 @@ if (![System.IO.File]::Exists($release_binary)) {
 
 cd $TMP_DIR
 
-Remove-Item -Exclude 'release' -Recurse -Force *
+Get-ChildItem . -Exclude 'release' | Remove-Item -Recurse -Force
 
 $svnz_installdir = Get-ItemPropertyValue 'HKLM:\SOFTWARE\7-Zip' 'Path'
 $svnz = $svnz_installdir + '7z.exe'
@@ -64,11 +74,15 @@ if (!$?) {
 }
 cd $TMP_DIR
 
-cp -Recurse $BASE_DIR\build\config .
 mkdir -p packages\core\data
+cp -Recurse $BASE_DIR\build\config .
 cp -Recurse $BASE_DIR\build\meta packages\core
 cp deps_dir\QAccelerator_x64.7z packages/core/data
 
 & $binarycreator -c .\config\config.xml -p packages QAccelerator_x64_Setup.exe
+
+if (!$?) {
+  exit 7
+}
 
 & $svnz a -tzip QAccelerator_x64_Setup.zip QAccelerator_x64_Setup.exe
