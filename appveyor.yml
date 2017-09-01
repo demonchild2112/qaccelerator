@@ -9,3 +9,8 @@ install:
 build_script:
 - powershell .\build_qx.ps1 basic
 - powershell .\build_qx.ps1 installer
+
+artifacts:
+- path: tmp\QAccelerator_x64_Setup.zip
+  name: QX_Setup_Zip
+  
