@@ -11,6 +11,6 @@ build_script:
 - powershell .\build_qx.ps1 installer
 
 artifacts:
+# Download url: https://ci.appveyor.com/api/projects/demonchild2112/qaccelerator/artifacts/tmp/QAccelerator_x64_Setup.zip
 - path: tmp\QAccelerator_x64_Setup.zip
   name: QX_Setup_Zip
-  
