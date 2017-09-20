@@ -7,6 +7,6 @@
     <Licenses>
         <License name="End User License Agreement" file="license.txt" />
     </Licenses>
-    <Default>script</Default>
+    <Default>true</Default>
     <Script>installscript.js</Script>
 </Package>

@@ -1,4 +1,6 @@
-﻿if ($args.Count -eq 0 -or ($args[0] -ne 'basic' -and $args[0] -ne 'installer')) {
+﻿$ErrorActionPreference = "Stop"
+
+if ($args.Count -eq 0 -or ($args[0] -ne 'basic' -and $args[0] -ne 'installer')) {
   Write-Error -Message 'Usage: build_qx [basic|installer]'
   exit 1
 }
@@ -86,3 +88,5 @@ if (!$?) {
 }
 
 & $svnz a -tzip QAccelerator_x64_Setup.zip QAccelerator_x64_Setup.exe
+
+cd $BASE_DIR

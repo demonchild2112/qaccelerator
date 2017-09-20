@@ -7,4 +7,5 @@
     <Publisher>Denver Ogaro</Publisher>
     <StartMenuDir>QAccelerator</StartMenuDir>
     <TargetDir>@HomeDir@/QAccelerator</TargetDir>
+    <ControlScript>controlscript.js</ControlScript>
 </Installer>
