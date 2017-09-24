@@ -7,7 +7,7 @@ install:
 - ps: Write-Output 'Install completed.'
 
 build_script:
-- powershell .\build_qx.ps1 basic
+- powershell .\build_qx.ps1 first_stage
 - powershell .\build_qx.ps1 installer
 
 artifacts:

@@ -38,7 +38,8 @@ HEADERS  += qaccelerator.h \
     speed-grapher.h \
     spinner.h \
     qaccelerator-db.h \
-    qaccelerator-utils.h
+    qaccelerator-utils.h \
+    version.h
 
 CONFIG += c++11
 

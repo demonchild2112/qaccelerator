@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Installer>
     <Name>QAccelerator</Name>
-    <Version>1.1</Version>
     <Title>QAccelerator</Title>
     <ProductUrl>http://ogaro.io/qaccelerator</ProductUrl>
     <Publisher>Denver Ogaro</Publisher>

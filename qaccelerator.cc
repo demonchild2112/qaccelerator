@@ -15,6 +15,7 @@
 #include "download-monitor.h"
 #include "preferences-dialog.h"
 #include "categorizer.h"
+#include "version.h"
 
 #include <QVBoxLayout>
 #include <utility>
@@ -39,7 +40,6 @@ using std::unordered_map;
 typedef QMessageBox::StandardButton StandardButton;
 typedef QMessageBox::StandardButtons StandardButtons;
 
-const char* VERSION = "1.1";
 const char* kStatusAll = "Status: All";
 const char* kCategoryAll = "Category: All";
 
@@ -582,10 +582,11 @@ void MainWindow::CreateActions() {
     QString about_message =
         QString("Version %1 <br><br>"
                 "<a href='http://ogaro.io/qaccelerator'>http://ogaro.io/qaccelerator</a><br><br>"
-                "Copyright %2 2016 Denver Ogaro<br>"
+                "Copyright %2 %3 Denver Ogaro<br>"
                 "denver@ogaro.net")
           .arg(VERSION)
-          .arg(QString::fromRawData(copyright, 1));
+          .arg(QString::fromRawData(copyright, 1))
+          .arg(COPYRIGHT_YEAR);
     QMessageBox mb(
         "QAccelerator",
          about_message,

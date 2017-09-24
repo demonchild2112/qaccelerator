@@ -1,9 +1,7 @@
-<?xml version="1.1" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package>
     <DisplayName>QAccelerator Core</DisplayName>
     <Description>Core application</Description>
-    <Version>1.1</Version>
-    <ReleaseDate>2016-11-14</ReleaseDate>
     <Licenses>
         <License name="End User License Agreement" file="license.txt" />
     </Licenses>
